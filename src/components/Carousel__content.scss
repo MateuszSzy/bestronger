@@ -1,0 +1,37 @@
+.active {
+  display: flex;
+}
+
+.inactive {
+  display: none;
+}
+
+.slide__container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.slide__image {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.slide__title,
+.slide__text {
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  z-index: 10;
+}
+
+.slide__text {
+  top: 65%;
+  font-size: 2rem;
+}

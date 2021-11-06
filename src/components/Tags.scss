@@ -1,0 +1,24 @@
+.all-tags {
+  width: 100vh;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  top: 85%;
+  justify-content: center;
+  z-index: 200;
+}
+
+.tag {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0px 3px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active-tag,
+.tag:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}

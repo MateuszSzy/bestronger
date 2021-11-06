@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+//fonts
+$fruktur: 'Fruktur', cursive;
+
+//colors
+$header-color: #84DCCF;
+$primary-color: #474044;
+$bc-color: #4F5165;
+$second-color: #547AA5;
+$third-color: #50D8D7;
+$fourth-color: #3D315B;
+$fifth-color:#8CA0D7;
+$sixth-color:#613DC1;
+$seventh-color:#4E148C;
+$eight-color:#77BFA3;
+$ninth-color: #BFD8BD;
+$logo-color: #37506D;
+$sign-color: lightseagreen;
+
+
+
+  //border-radius
+$borderRadius: 11px;
+
+//letter spacing
+$letterSpacing: 0.35px;
+
+//spacing
+$spacing-small: 10px;
+$spacing-mid: 20px;
+$spacing-large: 30px;
+$spacing-xl: 50px;
+
+//heights
+$headerHeight: 110px;
+
+//box shadow
+$boxShadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 3px 3x rgba(0, 0, 0, 0.25),
+0 4px 4px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+
+
+
+// breakpoints
+@mixin breakpoint($point) {
+  @if $point == xl {
+    // 1120px
+    @media (min-width: 70em) {
+      @content;
+    }
+  } @else if $point == lg {
+    // 1024px
+    @media (min-width: 64em) {
+      @content;
+    }
+  } @else if $point == md {
+    // 768px
+    @media (min-width: 48em) {
+      @content;
+    }
+  } @else if $point == md-only {
+    // 767px
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == sm {
+    // 600px
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  } @else if $point == sm-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+}
+

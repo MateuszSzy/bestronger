@@ -1,0 +1,146 @@
+@import "./../styles/variables.scss";
+
+.header {
+  background: $header-color;
+  width: 100%;
+  height: $headerHeight;
+  padding: 0 1.5rem;
+  @include breakpoint(md) {
+    padding: 0 3rem;
+  }
+  transition: 0.3s ease all;
+
+  &__content {
+    overflow: hidden;
+    color: $second-color;
+    margin: 0 auto;
+    max-width: 1920px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+
+    &__logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: $logo-color;
+    }
+    a {
+      text-decoration: none;
+      color: darkcyan;
+    }
+
+    &__nav {
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: $bc-color;
+      transform: translate(0);
+      transition: 0.3s ease transform;
+
+      @include breakpoint(md) {
+        background: transparent;
+        transform: none;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        height: 100%;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $spacing-large;
+
+        @include breakpoint(md) {
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 0;
+          margin-right: calc(0.6rem + #{$spacing-mid});
+        }
+
+        li {
+          &:not(:last-child) {
+            margin-bottom: $spacing-large;
+            @include breakpoint(md) {
+              margin-bottom: 0;
+              margin-right: $spacing-mid;
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: inherit;
+            padding: 0.70rem 1.2rem;
+            border-radius: $borderRadius;
+            transition: 0.3s ease all;
+
+            &:hover {
+              background: rgba($bc-color, 0.1);
+            }
+
+            &:active {
+              border-radius: calc(#{$borderRadius} + 3px);
+              background: linear-gradient(($fourth-color), ($fifth-color));
+            }
+          }
+        }
+      }
+
+      button {
+        cursor: pointer;
+        outline: none;
+        padding: 0.6rem 1.3rem;
+        border-radius: $borderRadius;
+        font-size: 1.2rem;
+        font-family: $fruktur;
+        background: #77BFA3;
+        border: 1.2px solid transparent;
+        transition: 0.25s ease all;
+
+        &:hover {
+          border-color: $ninth-color;
+          background: $sign-color;
+          color: $logo-color;
+        }
+
+        &:active {
+          border-color: $ninth-color;
+          background: $sign-color;
+          color: $logo-color;
+        }
+      }
+
+      &.isMenu {
+        transform: translate(100%);
+      }
+    }
+    &__toggle {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      transition: 0.25s ease all;
+      position: relative;
+
+      &:hover {
+        color: $sign-color;
+      }
+
+      @include breakpoint(md){
+        display: none;
+      }
+    }
+  }
+}

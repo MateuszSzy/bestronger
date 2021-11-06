@@ -1,0 +1,16 @@
+@import "./../styles/variables.scss";
+
+.container {
+  height: 100%;
+  background: $bc-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    padding: 1.3rem 2rem;
+    background: linear-gradient(200deg, $second-color, rgba($second-color, 0.4));
+    border-radius: $borderRadius calc(#{$borderRadius} * 10);
+  }
+}
