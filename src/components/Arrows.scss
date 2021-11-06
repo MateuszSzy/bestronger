@@ -1,35 +1,32 @@
 .arrows {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   &__prev{
     cursor: pointer;
-    z-index: 100;
-    border: 3px solid red;
+    z-index: 10;
     position: absolute;
-    top: 50%;
+    top: 60%;
     width: auto;
     padding: 1rem;
     margin-top: -3rem;
     font-size: 40px;
     font-weight: bold;
     border-radius: 0px 5px 5px 0px;
+    color: #77ffac;
   }
 
   &__next{
     cursor: pointer;
-    z-index: 100;
-    border: 3px solid red;
+    z-index: 10;
     position: absolute;
-    top: 50%;
-    left: 80%;
+    top: 60%;
     width: auto;
     padding: 1rem;
-
+    margin-top: -3rem;
     font-size: 40px;
     font-weight: bold;
     border-radius: 0px 5px 5px 0px;
+    right: 0;
+    color: #77ffac;
   }
 
 
@@ -40,9 +37,4 @@
     transition: all 0.5s ease-in;
   }
 
-
-  .next {
-    right: 0;
-    border-radius: 5px 0px 0px 5px;
-  }
 }

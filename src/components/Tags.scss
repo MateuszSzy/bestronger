@@ -1,11 +1,12 @@
-.all-tags {
-  width: 100vh;
+@import "./../styles/variables.scss";
+.all__tags {
+  width: 100%;
   height: 100%;
   position: absolute;
   display: flex;
-  top: 85%;
+  top: 60%;
   justify-content: center;
-  z-index: 200;
+  z-index: 10;
 }
 
 .tag {
@@ -13,12 +14,12 @@
   height: 1.5rem;
   width: 1.5rem;
   margin: 0px 3px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #78ffac;
   border-radius: 50%;
   display: inline-block;
 }
 
 .active-tag,
 .tag:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color:royalblue;
 }

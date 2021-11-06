@@ -1,29 +1,29 @@
 .active {
-  display: flex;
+  display: inline-block;
+  height: 50vh;
+  width: 100%;
+  position: relative;
 }
 
 .inactive {
   display: none;
-}
-
-.slide__container{
-  height: 100%;
+  height: 50vh;
   width: 100%;
   position: relative;
 }
 
 .slide__image {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   position: absolute;
-  object-fit: cover;
+  object-fit:cover;
 }
 
 .slide__title,
 .slide__text {
   width: 100%;
   height: 100%;
-  color: white;
+  color: #77ffac;
   font-size: 50px;
   position: absolute;
   text-align: center;

@@ -2,7 +2,7 @@ import First from "../assets/karuzela1.jpg";
 import Second from "../assets/karuzela2.jpg";
 import Third from "../assets/karuzela3.jpg";
 
-export default [
+const arr = [
     {
         title: 'Check your water requirement',
         description: 'It is very important thing',
@@ -19,3 +19,4 @@ export default [
         urls: Third,
     },
 ]
+export default arr;
