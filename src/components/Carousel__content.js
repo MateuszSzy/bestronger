@@ -4,10 +4,10 @@ import "./Arrows";
 
 function Carousel__content({activeIndex, imageSlider}) {
     return (
-        <section>
+        <section className="carousel__container">
             {imageSlider.map((slide,index) => (
                 <div
-                    className={index === activeIndex ? "active" : "inactive"}
+                    className={index === activeIndex ? "dok active" : "dok inactive"}
                     key={index}
                 >
                     <img className="slide__image" src={slide.urls} alt="" />

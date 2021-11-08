@@ -4,29 +4,29 @@
     cursor: pointer;
     z-index: 10;
     position: absolute;
-    top: 60%;
+    top: 40%;
     width: auto;
     padding: 1rem;
     margin-top: -3rem;
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: bold;
     border-radius: 0px 5px 5px 0px;
-    color: #77ffac;
+    color: rgba(10,10,10,0.97);
   }
 
   &__next{
     cursor: pointer;
     z-index: 10;
     position: absolute;
-    top: 60%;
+    top: 40%;
     width: auto;
     padding: 1rem;
     margin-top: -3rem;
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: bold;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 5px 0px 0px 5px;
     right: 0;
-    color: #77ffac;
+    color: rgba(10,10,10,0.97);
   }
 
 

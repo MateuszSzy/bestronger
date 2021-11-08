@@ -3,9 +3,9 @@
 $fruktur: 'Fruktur', cursive;
 
 //colors
-$header-color: #84DCCF;
+$header-color:(linear-gradient(#494949,grey));
 $primary-color: #474044;
-$bc-color: #4F5165;
+$bc-color:(linear-gradient(grey,#494949));
 $second-color: #547AA5;
 $third-color: #50D8D7;
 $fourth-color: #3D315B;
@@ -16,10 +16,16 @@ $eight-color:#77BFA3;
 $ninth-color: #BFD8BD;
 $logo-color: #37506D;
 $sign-color: lightseagreen;
+$color-primary: #08A6E4;
+$color-primary-shadow: rgba(7, 172, 230, .16);
+$color-redish: #FB3B64;
+$color-green: #55DFB4;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey: #A5A5A5;
+$color-light-grey: #F7F7F7;
 
-
-
-  //border-radius
+//border-radius
 $borderRadius: 11px;
 
 //letter spacing
@@ -38,6 +44,26 @@ $headerHeight: 110px;
 $boxShadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 3px 3x rgba(0, 0, 0, 0.25),
 0 4px 4px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
 
+
+//mixins
+
+@mixin desktop {
+  @media (max-width: 1352px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
 
 
 // breakpoints

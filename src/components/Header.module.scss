@@ -1,9 +1,11 @@
 @import "./../styles/variables.scss";
 
 .header {
-  background: $header-color;
+  height: 100px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
-  height: $headerHeight;
   padding: 0 1.5rem;
   @include breakpoint(md) {
     padding: 0 3rem;
@@ -27,9 +29,10 @@
       font-weight: bold;
       color: $logo-color;
     }
+
     a {
       text-decoration: none;
-      color: darkcyan;
+      color: #ff3a00;
     }
 
     &__nav {
@@ -81,18 +84,22 @@
 
           a {
             text-decoration: none;
-            color: inherit;
+            color: black;
+            background: linear-gradient(orange,yellow,red);
             padding: 0.70rem 1.2rem;
             border-radius: $borderRadius;
             transition: 0.3s ease all;
 
             &:hover {
-              background: rgba($bc-color, 0.1);
+              border-color: orangered;
+              background: linear-gradient(red,yellow,orange);
+              color: $logo-color;
             }
 
             &:active {
-              border-radius: calc(#{$borderRadius} + 3px);
-              background: linear-gradient(($fourth-color), ($fifth-color));
+              border-color: $ninth-color;
+              background: #ff0026;
+              color: $logo-color;
             }
           }
         }
@@ -105,19 +112,19 @@
         border-radius: $borderRadius;
         font-size: 1.2rem;
         font-family: $fruktur;
-        background: #77BFA3;
+        background: linear-gradient(red,orange,yellow,red);
         border: 1.2px solid transparent;
         transition: 0.25s ease all;
 
         &:hover {
-          border-color: $ninth-color;
-          background: $sign-color;
+          border-color: orangered;
+          background: linear-gradient(red,yellow,orange);
           color: $logo-color;
         }
 
         &:active {
           border-color: $ninth-color;
-          background: $sign-color;
+          background: #ff0026;
           color: $logo-color;
         }
       }

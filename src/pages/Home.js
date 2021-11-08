@@ -1,15 +1,19 @@
 import React from 'react';
+import Carousel from "../components/Carousel";
+import Form from "./Form";
+import "./Home.scss";
 
 const Home = () => {
     return (
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusant
-                ium aliquam, atque blanditiis, cum d
-                eserunt eligendi id impedit labore, laborum libero minima modi nec
-                essitatibus omnis quidem quo repudiandae sapiente ut voluptatibus?
-            </p>
-            <h1>Home</h1>
-        </div>
+        <>
+            <div className="home__container">
+                <Carousel />
+                <Form />
+            </div>
+
+
+        </>
+
     );
 };
 

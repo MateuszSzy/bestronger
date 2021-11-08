@@ -55,7 +55,7 @@ const Header = () => {
                             <Link to="/Packages" onClick={menuToggleHandler}>Packages</Link>
                         </li>
                         <li>
-                            <Link to="/Watercalc" onClick={menuToggleHandler}>Water Calc</Link>
+                            <a href="https://wodanastart.pl/kalkulator-wody" onClick={menuToggleHandler}>Water Calculator</a>
                         </li>
                     </ul>
                     <button onClick={signUpClickHandler}>Sign up</button>

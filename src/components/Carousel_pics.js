@@ -1,22 +1,22 @@
-import First from "../assets/karuzela1.jpg";
-import Second from "../assets/karuzela2.jpg";
-import Third from "../assets/karuzela3.jpg";
+import First from "../assets/salee.jpg";
+import Second from "../assets/watter.jpg";
+import Third from "../assets/training.jpg";
 
 const arr = [
     {
-        title: 'Check your water requirement',
-        description: 'It is very important thing',
-        urls: First,
-    },
-    {
-        title: 'Challenges are very important in our life',
-        description: 'Change your life and take care of your health ',
+        title: 'Water requirement',
+        description: '',
         urls: Second,
     },
     {
-        title:'Discount',
-        description: 'Package ULTRA -20%',
+        title: 'Challenges ',
+        description: 'Change your life ',
         urls: Third,
+    },
+    {
+        title:'Discount',
+        description: 'Package ULTRA -50%',
+        urls: First,
     },
 ]
 export default arr;
