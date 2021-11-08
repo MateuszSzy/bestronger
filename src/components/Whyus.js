@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Whyus.scss";
-import img from "../assets/why.png"
+
 
 
 const Whyus = () => {

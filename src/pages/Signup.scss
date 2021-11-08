@@ -1,3 +1,76 @@
 @import "../styles/variables.scss";
 
+.form__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 3rem;
+  }
+
+  &__name {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  &__email {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  &__message {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  &__submit {
+    padding: 10px 40px;
+    border: 1px solid white;
+    background-color: #189eff;
+    font-size: 20px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    margin-top: 10px;
+  }
+
+  &__submit:hover {
+    background-color: #167dee;
+  }
+}
+
+textarea {
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  border: 1px solid lightgray;
+  background: #fff;
+  font-size: 16px;
+  color: rgb(0, 0, 32);
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid rgb(0, 0, 196);
+}
+
+textarea {
+  height: 150px;
+  max-width: 400px;
+  min-height: 100px;
+}
+
+label {
+  padding-bottom: 10px;
+  color: rgb(0, 0, 32);
+  font-weight: bold;
+}
+
+
 

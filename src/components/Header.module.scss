@@ -131,6 +131,8 @@
 
       &.isMenu {
         transform: translate(100%);
+        background: linear-gradient(white,blue,white,cornflowerblue,white);
+        opacity: 85%;
       }
     }
     &__toggle {
@@ -140,9 +142,11 @@
       font-size: 1.8rem;
       transition: 0.25s ease all;
       position: relative;
+      color: cornflowerblue;
 
       &:hover {
         color: $sign-color;
+
       }
 
       @include breakpoint(md){
