@@ -1,5 +1,6 @@
 import React from "react";
-
+import {AiFillSave} from "react-icons/all";
+import {TiCancel} from "react-icons/all";
 
 //edit row exercise
 const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
@@ -36,8 +37,8 @@ const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) 
                 />
             </td>
             <td>
-                <button type="submit">Save</button>
-                <button type="button" onClick={handleCancelClick}>Cancel</button>
+                <button type="submit"><AiFillSave /></button>
+                <button type="button" onClick={handleCancelClick}><TiCancel /></button>
             </td>
         </tr>
     );

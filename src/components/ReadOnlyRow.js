@@ -1,4 +1,6 @@
 import React from "react";
+import {AiTwotoneEdit} from "react-icons/all";
+import {AiFillDelete} from "react-icons/all";
 
 
 //read only row exercise
@@ -12,12 +14,12 @@ const ReadOnlyRow = ({exercise, handleEditClick, handleDeleteClick}) => {
                 <button
                     type="button"
                     onClick={(event) => handleEditClick(event, exercise)}>
-                    Edit
+                    <AiTwotoneEdit />
                 </button>
                 <button
                     type="button"
                     onClick={() => handleDeleteClick(exercise.id)}>
-                    Delete
+                    <AiFillDelete />
                 </button>
             </td>
         </tr>

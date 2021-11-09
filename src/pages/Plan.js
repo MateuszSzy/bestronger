@@ -3,11 +3,14 @@ import "./Plan.scss";
 import {db} from "../firebase";
 import data from "./Plan.json";
 import {nanoid} from 'nanoid';
+
 import {AiOutlinePlusCircle} from "react-icons/all";
 import {AiOutlineMinusCircle} from "react-icons/all";
 import {IoIosAddCircle} from "react-icons/all";
+
 import ReadOnlyRow from "../components/ReadOnlyRow";
 import EditableRow from "../components/Editablerow";
+
 
 
 
