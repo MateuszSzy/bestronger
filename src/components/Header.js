@@ -36,7 +36,7 @@ const Header = () => {
 
     const signUpClickHandler = () => {
         menuToggleHandler();
-        navigate('/Signup');
+        navigate('/Plan');
     };
 
     return(
@@ -58,7 +58,7 @@ const Header = () => {
                             <a href="https://wodanastart.pl/kalkulator-wody" onClick={menuToggleHandler}>Water Calculator</a>
                         </li>
                     </ul>
-                    <button onClick={signUpClickHandler}>Sign up</button>
+                    <button onClick={signUpClickHandler}>Workout Planner</button>
                 </nav>
                 <div className={classes.header__content__toggle}>
                     {!menuOpen ? (

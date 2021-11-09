@@ -1,6 +1,10 @@
 @import "../styles/variables.scss";
 
 .form__container {
+  background-image: url("../assets/headerrr.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   flex-direction: column;

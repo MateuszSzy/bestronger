@@ -85,7 +85,8 @@
           a {
             text-decoration: none;
             color: black;
-            background: linear-gradient(orange,yellow,red);
+            //background: linear-gradient(orange,yellow,red);
+            background: white;
             padding: 0.70rem 1.2rem;
             border-radius: $borderRadius;
             transition: 0.3s ease all;
@@ -112,7 +113,8 @@
         border-radius: $borderRadius;
         font-size: 1.2rem;
         font-family: $fruktur;
-        background: linear-gradient(red,orange,yellow,red);
+        //background: linear-gradient(red,orange,yellow,red);
+        background: white;
         border: 1.2px solid transparent;
         transition: 0.25s ease all;
 
