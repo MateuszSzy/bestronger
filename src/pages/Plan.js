@@ -12,9 +12,17 @@ import ReadOnlyRow from "../components/ReadOnlyRow";
 import EditableRow from "../components/Editablerow";
 
 
-
-
 const Plan = () => {
+
+    // Firebase------------------------------------------------
+
+    const [names, setNames] = useState("");
+    const [reps, setReps] = useState("");
+    const [weight, setWeight] = useState("");
+
+    const [loaders,setLoaders] = useState(false);
+
+
 
     const [exercises, setExercises] = useState(data);
     const [addFormData, setAddFormData] = useState({
@@ -31,7 +39,7 @@ const Plan = () => {
 
     const [editExerciseId, setEditExerciseId] = useState(null);
 
-    const handleAddFormChange = (event) => {
+        const handleAddFormChange = (event) => {
         event.preventDefault();
 
         const fieldName = event.target.getAttribute("name");
@@ -58,6 +66,20 @@ const Plan = () => {
     const handleAddFormSubmit = (event) => {
         event.preventDefault();
 
+        setLoaders(true)
+
+        db.collection('exercises').add({
+            name: addFormData.name,
+            reps: addFormData.reps,
+            weight: addFormData.weight,
+        })
+            .then(() => {
+               console.log('')
+            })
+            .catch((error) => {
+                console.log('')
+            });
+
         const newExercise = {
             id: nanoid(),
             name: addFormData.name,
@@ -67,6 +89,7 @@ const Plan = () => {
 
         const newExercises = [...exercises, newExercise];
         setExercises(newExercises);
+
     };
 
     const handleEditFormSubmit = (event) => {
@@ -165,7 +188,7 @@ const Plan = () => {
                 </form>
 
                 <h2>Add new exercise</h2>
-                <form onSubmit={handleAddFormSubmit}>
+                <form onSubmit={handleAddFormSubmit} >
                     <input
                         type="text" name="name"
                         required="required" placeholder="Enter a name"
