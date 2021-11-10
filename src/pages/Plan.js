@@ -1,8 +1,9 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 import "./Plan.scss";
 import {db} from "../firebase";
 import data from "./Plan.json";
 import {nanoid} from 'nanoid';
+
 
 import {AiOutlinePlusCircle} from "react-icons/all";
 import {AiOutlineMinusCircle} from "react-icons/all";
@@ -16,10 +17,10 @@ const Plan = () => {
 
     // Firebase------------------------------------------------
 
-    const [names, setNames] = useState("");
-    const [reps, setReps] = useState("");
-    const [weight, setWeight] = useState("");
-
+    // const [names, setNames] = useState("");
+    // const [reps, setReps] = useState("");
+    // const [weight, setWeight] = useState("");
+    //
     const [loaders,setLoaders] = useState(false);
 
 
@@ -31,11 +32,12 @@ const Plan = () => {
         weight: '',
     });
 
-    const [editFormData, setEditFormData] = useState({
+    const [editFormData, setEditFormData] =useState({
         name: '',
         reps: '',
         weight: '',
     });
+
 
     const [editExerciseId, setEditExerciseId] = useState(null);
 
@@ -49,7 +51,7 @@ const Plan = () => {
         newFormData[fieldName] = fieldValue;
 
         setAddFormData(newFormData);
-    };
+        };
 
     const handleEditFormChange = (event) => {
         event.preventDefault();
@@ -61,7 +63,7 @@ const Plan = () => {
         newFormData[fieldName]= fieldValue;
 
         setEditFormData(newFormData);
-    }
+    };
 
     const handleAddFormSubmit = (event) => {
         event.preventDefault();
@@ -134,14 +136,34 @@ const Plan = () => {
     //button delete exercise
     const handleDeleteClick = (exerciseId) => {
         const newExercise = [...exercises];
-
         const index = exercises.findIndex((exercise) => exercise.id === exerciseId);
 
         //1 bo tyle elementów usunąć
         newExercise.splice(index, 1);
 
         setExercises(newExercise);
+
+
     };
+
+
+
+    //use a firestore data
+    useEffect(() => {
+        db.collection("exercises")
+            .get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    setExercises((state) => [
+                        ...state,
+                        {
+                            ...doc.data(),
+                            id: doc.id,
+                        },
+                    ]);
+                });
+            });
+    }, []);
 
 
     return (
@@ -157,13 +179,12 @@ const Plan = () => {
                 <form onSubmit={handleEditFormSubmit}>
                     <table>
                         <thead>
-                        <tr className="day">Monday</tr>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Reps</th>
-                                    <th>Weight(kg)</th>
-                                    <th>Act</th>
-                                </tr>
+                            <tr>
+                                <th>Name</th>
+                                <th>Reps</th>
+                                <th>Weight(kg)</th>
+                                <th>Act</th>
+                            </tr>
                         </thead>
                         <tbody>
                         {exercises.map((exercise) =>(

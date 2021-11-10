@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: white;
+  border: 2px solid #cffcff;
 
   @include desktop {
     margin: 50px auto;
@@ -41,8 +43,9 @@
     background: #cffcff;
 
     @include desktop {
-      width: 100%;
-      max-width: 370px;
+      //width: 100%;
+      //max-width: 370px;
+
       flex-direction: row;
       flex-wrap: wrap;
       margin-bottom: 50px;
