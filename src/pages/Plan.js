@@ -142,8 +142,6 @@ const Plan = () => {
         newExercise.splice(index, 1);
 
         setExercises(newExercise);
-
-
     };
 
 
@@ -164,6 +162,10 @@ const Plan = () => {
                 });
             });
     }, []);
+
+
+    //delete colleciot from firestore
+
 
 
     return (

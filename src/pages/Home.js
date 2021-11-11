@@ -3,6 +3,7 @@ import Carousel from "../components/Carousel";
 
 import "./Home.scss";
 import Signup from "./Signup";
+import Footer from "../components/Footer";
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <div className="home__container">
                 <Carousel />
                 <Signup />
+                <Footer />
             </div>
 
 

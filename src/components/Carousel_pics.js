@@ -1,4 +1,4 @@
-import First from "../assets/salee.jpg";
+import First from "../assets/sale.jpg";
 import Second from "../assets/watter.jpg";
 import Third from "../assets/training.jpg";
 
