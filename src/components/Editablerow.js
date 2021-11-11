@@ -2,6 +2,8 @@ import React from "react";
 import {AiFillSave} from "react-icons/all";
 import {TiCancel} from "react-icons/all";
 
+
+//add new exercise
 //edit row exercise
 const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
     return (

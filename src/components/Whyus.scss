@@ -6,23 +6,19 @@
   align-items: center;
   flex-direction: row;
   width: 100%;
-
-  background: white;
-  opacity: 60%;
-  //background-image: url("../assets/whyuss.jpg");
-  //background-position: center center;
-  //background-size: cover;
-  //background-repeat: no-repeat;
+  background-image: url("../assets/whyuss.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
 
-    @media only screen and (max-width: 600px) {
-      flex-direction: column;
-    }
+  @include mobile {
+    flex-direction: column;
+    background-size: cover;
+  }
 
   &__text {
-
     border: 2px solid darkblue;
-
     padding-bottom: 2rem;
     padding-right: 3rem;
     padding-left: 3rem;
@@ -32,7 +28,6 @@
   &__pic {
     height: 100%;
     width: 100%;
-
     background-size: contain;
     background-repeat: no-repeat;
     position: static;
@@ -48,7 +43,7 @@
   }
 
   &__description {
-    color: darkblue;
+    color: $ninth-color;
     font-size: 1.4rem;
     text-align: center;
     line-height: 2.4rem;

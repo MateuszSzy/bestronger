@@ -7,8 +7,8 @@
   background-repeat: no-repeat;
   width: 100%;
   padding: 0 1.5rem;
-  @include breakpoint(md) {
-    padding: 0 3rem;
+  @include mobile {
+    padding: 1px;
   }
   transition: 0.3s ease all;
 
@@ -23,6 +23,7 @@
     justify-content: space-between;
     position: relative;
     z-index: 100;
+
 
     &__logo {
       font-size: 2.5rem;
@@ -85,7 +86,6 @@
           a {
             text-decoration: none;
             color: black;
-            //background: linear-gradient(orange,yellow,red);
             background: white;
             padding: 0.70rem 1.2rem;
             border-radius: $borderRadius;
@@ -113,7 +113,6 @@
         border-radius: $borderRadius;
         font-size: 1.2rem;
         font-family: $fruktur;
-        //background: linear-gradient(red,orange,yellow,red);
         background: white;
         border: 1.2px solid transparent;
         transition: 0.25s ease all;
@@ -133,8 +132,10 @@
 
       &.isMenu {
         transform: translate(100%);
-        background: linear-gradient(white,blue,white,cornflowerblue,white);
-        opacity: 85%;
+        background-image: url("./../assets/menu.jpg");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
     }
     &__toggle {

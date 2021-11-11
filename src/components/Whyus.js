@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Whyus.scss";
-import Footer from "./Footer";
+
 
 
 

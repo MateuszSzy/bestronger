@@ -14,15 +14,24 @@
   border: 1px solid $second-color;
 
   h1 {
-    color: black;
+    margin-top: 20px;
+    border: 1px solid grey;
+    border-radius: 43px;
+    padding: 10px 20px;
+    color:  #454040 ;
     font-family: $lato;
     font-weight: 700;
     font-size: 3rem;
+    background: #f6fff1;
   }
 
   @include mobile {
     flex-direction: column;
     height: 100%;
+    background-image: url("./../assets/packages.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   &__container {
     width: 100%;
@@ -33,9 +42,14 @@
     flex-direction: row;
 
     @include mobile{
+      height: 100vh;
+      background-image: url("./../assets/packages.jpg");
       flex-direction: column;
       margin: 1px;
       padding: 1px;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 }
@@ -177,7 +191,7 @@
   padding: 10px;
 
   &__ite {
-    padding: 10px;
+    padding: 8px;
 
     @include mobile{
       flex-direction: column;
@@ -251,7 +265,7 @@
   padding: 10px;
 
   &__it {
-    padding: 5px;
+    padding: 9px;
 
     @include mobile{
       flex-direction: column;

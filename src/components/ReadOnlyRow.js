@@ -3,6 +3,7 @@ import {AiTwotoneEdit} from "react-icons/all";
 import {AiFillDelete} from "react-icons/all";
 
 
+
 //read only row exercise
 const ReadOnlyRow = ({exercise, handleEditClick, handleDeleteClick}) => {
     return (

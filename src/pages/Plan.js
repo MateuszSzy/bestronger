@@ -63,7 +63,9 @@ const Plan = () => {
         newFormData[fieldName]= fieldValue;
 
         setEditFormData(newFormData);
+
     };
+
 
     const handleAddFormSubmit = (event) => {
         event.preventDefault();
@@ -142,6 +144,12 @@ const Plan = () => {
         newExercise.splice(index, 1);
 
         setExercises(newExercise);
+
+        db.collection("exercises").doc(exerciseId).delete().then(() => {
+            console.log("Document successfully deleted!");
+        }).catch((error) => {
+            console.error("Error removing document: ", error);
+        });
     };
 
 
@@ -151,7 +159,7 @@ const Plan = () => {
         db.collection("exercises")
             .get()
             .then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
+                querySnapshot.forEach((doc ) => {
                     setExercises((state) => [
                         ...state,
                         {
@@ -162,10 +170,6 @@ const Plan = () => {
                 });
             });
     }, []);
-
-
-    //delete colleciot from firestore
-
 
 
     return (
@@ -184,7 +188,7 @@ const Plan = () => {
                             <tr>
                                 <th>Name</th>
                                 <th>Reps</th>
-                                <th>Weight(kg)</th>
+                                <th>(kg)</th>
                                 <th>Act</th>
                             </tr>
                         </thead>
