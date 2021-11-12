@@ -1,6 +1,7 @@
 # bestronger
 
 BeStronger Application 
+Made with React and Firebase
 
 On the "Home" page you will find information about your water demand and all discount. Also a form to contact with us.
 
