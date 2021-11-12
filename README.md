@@ -2,7 +2,7 @@
 
 BeStronger Application 
 
-On the "Home" page you will find information about your water demand and all discount, also a form to contact with us.
+On the "Home" page you will find information about your water demand and all discount. Also a form to contact with us.
 
 On the "Why us" page you will find the reason why you should choose our App. 
 
