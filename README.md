@@ -6,7 +6,7 @@ On the "Home" page you will find information about your water demand and all dis
 
 On the "Why us" page you will find the reason why you should choose our App. 
 
-On the "Packages" page you will find information about what each package includes inclusive with price.
+On the "Packages" page you will find information about what each package includes.
 
 On the "Water Calculator" page you will find you will be redirected to an external website, where you will check your water demands.
 
