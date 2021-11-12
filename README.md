@@ -10,4 +10,4 @@ On the "Packages" page you will find information about what each package include
 
 On the "Water Calculator" page you will be redirected to an external website, where you will check your water demands.
 
-On "Workout Planner" page you can create a workout exercises list and edit, delete and view all the created exercises which includes reps and weight.
+On "Workout Planner" page you can create a workout exercises list. You can edit, delete and view all the created exercises which includes reps and weight.
